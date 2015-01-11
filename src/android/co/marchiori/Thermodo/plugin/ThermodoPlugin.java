@@ -50,7 +50,6 @@ public class ThermodoPlugin extends CordovaPlugin implements ThermodoListener {
     
     @Override
 	public void onStartedMeasuring() {
-    	//showToast("Started measuring", 1);
     	Log.d(TAG, "Started measuring");
     	PluginResult progressResult = new PluginResult(PluginResult.Status.OK, "STARTED");
         progressResult.setKeepCallback(true);
@@ -59,7 +58,6 @@ public class ThermodoPlugin extends CordovaPlugin implements ThermodoListener {
 
 	@Override
 	public void onStoppedMeasuring() {
-		//showToast("Stopped measuring", 1);
 		Log.d(TAG, "Stopped measuring");
 		PluginResult progressResult = new PluginResult(PluginResult.Status.OK, "STOPPED");
         progressResult.setKeepCallback(true);
