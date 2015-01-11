@@ -1,0 +1,6 @@
+{
+    "version": "1.0.18",
+    "name": "co.marchiori.Thermodo.plugin",
+    "cordova_name": "Thermodo",
+    "engines": []
+}

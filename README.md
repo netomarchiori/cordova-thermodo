@@ -1,0 +1,1 @@
+Thermodo Cordova Plugin

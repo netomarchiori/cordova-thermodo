@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin
+    xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="co.marchiori.Thermodo.plugin"
+    version="1.0.18">
+
+    <!-- temp remove engines tag due to bug CB-5139 in cli 3.1.0-0.2.0 for blackberry 10
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    -->
+
+    <name>Thermodo</name>
+
+    <js-module src="www/phonegap-thermodo.js" name="Thermodo">
+        <clobbers target="thermodo" />
+    </js-module>
+
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/widget">
+            <feature name="Thermodo">
+                <param name="android-package" value="co.marchiori.Thermodo.plugin.ThermodoPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/co/marchiori/Thermodo/plugin/ThermodoPlugin.java"
+            target-dir="src/co/marchiori/Thermodo/plugin"/>
+            
+        <source-file src="libs/thermodosdk-1.0.18.jar"
+            target-dir="libs/"/>
+
+    </platform>
+
+</plugin>
